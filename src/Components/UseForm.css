@@ -1,0 +1,27 @@
+.container {
+    /* border: 1px solid black; */
+    /* height: 500px; */
+    /* width: 50%; */
+    margin: 0 auto;
+
+
+
+}
+
+Form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 1200px;
+    /* border: 1px solid black; */
+}
+
+.error {
+    color: red;
+}
+
+.form-control {
+display: flex;
+flex-direction: column;
+}
