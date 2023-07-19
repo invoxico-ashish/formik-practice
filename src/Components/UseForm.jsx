@@ -22,37 +22,13 @@ const initialValues = {
 const onSubmit = values => {
     console.log("Form data", values)
 }
-// const validate = values => {
-//     let errors = {}
-
-//     if (!values.name) {
-//         errors.name = "Required"
-//     }
-//     if (!values.email) {
-//         errors.email = "Required"
-//     } else if (/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(values.email)) {
-//         errors.email = "Invalid email"
-//     }
-//     if (!values.channel) {
-//         errors.channel = "Required"
-//     }
-//     return errors;
-// }
 const VAlidationSchema = Yup.object({
     name: Yup.string().required("Required"),
     email: Yup.string().email("invalid format").required("Required"),
     channel: Yup.string().required("Required"),
     address:Yup.string().required("Required"),
 })
-function UseForm() {
-    // const formik = useFormik({
-    //     initialValues,
-    //     onSubmit,
-    //     VAlidationSchema,
-
-    //     // validate,
-    // })
-    // console.log("Form err", formik.errors)s
+function UseForm() { 
     return (
         <Formik
             initialValues={initialValues}
